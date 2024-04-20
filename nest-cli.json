@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-bdsql/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/api-bdsql/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/api-bdsql",
+  "projects": {
+    "api-bdsql": {
+      "type": "application",
+      "root": "apps/api-bdsql",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-bdsql/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-bdsql/tsconfig.app.json"
+      }
+    },
+    "userapp": {
+      "type": "application",
+      "root": "apps/userapp",
+      "entryFile": "main",
+      "sourceRoot": "apps/userapp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/userapp/tsconfig.app.json"
+      }
+    }
+  }
+}
